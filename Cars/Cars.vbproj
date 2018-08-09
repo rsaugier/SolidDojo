@@ -63,15 +63,30 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.vb" />
-    <Compile Include="CarBase.vb" />
-    <Compile Include="ElectricalCar.vb" />
+    <Compile Include="Composition\AntiBrakeSystem.vb" />
+    <Compile Include="Composition\Car.vb" />
+    <Compile Include="Composition\ElectricalEngine.vb" />
+    <Compile Include="Composition\IAntiBrakeSystem.vb" />
+    <Compile Include="Composition\IEngine.vb" />
+    <Compile Include="Composition\ISpeedRegulator.vb" />
+    <Compile Include="Composition\SpeedRegulator.vb" />
+    <Compile Include="Composition\ThermicEngine.vb" />
+    <Compile Include="Inheritance\ElectricalCarWithAbs.vb" />
+    <Compile Include="Inheritance\ElectricalCarWithSpeedRegulator.vb" />
+    <Compile Include="Inheritance\ElectricalCarWithSpeedRegulatorAndAbs.vb" />
+    <Compile Include="Inheritance\ThermicCarWithAbs.vb" />
+    <Compile Include="Inheritance\ThermicCarWithSpeedRegulator.vb" />
+    <Compile Include="Inheritance\ThermicCarWithSpeedRegulatorAndAbs.vb" />
+    <Compile Include="Monolithic\Car.vb" />
+    <Compile Include="Inheritance\Car.vb" />
+    <Compile Include="Inheritance\ElectricalCar.vb" />
+    <Compile Include="Monolithic\EngineType.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="ThermicCar.vb" />
+    <Compile Include="Inheritance\ThermicCar.vb" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -79,5 +94,6 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
