@@ -11,6 +11,12 @@
             StartCoolingFan()
         End Sub
 
+        Protected Overrides Sub OnBrake()
+        End Sub
+
+        Protected Overrides Sub OnAccelerate()
+        End Sub
+
         Private Sub StartCoolingFan()
             Console.WriteLine("Starting cooling fan")
         End Sub

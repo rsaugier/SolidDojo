@@ -1,6 +1,6 @@
 ﻿Namespace Inheritance
 
-    Public Class Car
+    Public MustInherit Class Car
 
 #Region "Public methods"
         Public Sub StartEngine()
@@ -23,17 +23,13 @@
             Console.WriteLine("Braking!")
         End Sub
 
-        Protected Overridable Sub OnBrake()
-        End Sub
+        Protected MustOverride Sub OnBrake()
 
-        Protected Overridable Sub OnAccelerate()
-        End Sub
+        Protected MustOverride Sub OnAccelerate()
 
-        Protected Overridable Sub OnStartupEngine()
-        End Sub
+        Protected MustOverride Sub OnStartupEngine()
 
-        Protected Overridable Sub OnStopEngine()
-        End Sub
+        Protected MustOverride Sub OnStopEngine()
 
 #End Region
 

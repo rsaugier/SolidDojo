@@ -12,6 +12,10 @@ Namespace Composition
 
 #Region "Constructor"
         Public Sub New(engine As IEngine, abs As IAntiBrakeSystem, speedRegulator As ISpeedRegulator)
+            If engine Is Nothing Then
+                Throw New ArgumentNullException(NameOf(engine))
+            End If
+
             _engine = engine
             _abs = abs
             _speedRegulator = speedRegulator
@@ -32,12 +36,12 @@ Namespace Composition
         End Sub
 
         Public Sub Accelerate(amount As Double)
-            _speedRegulator.OnAccelerate()
+            _speedRegulator?.OnAccelerate()
             Console.WriteLine("Accelerating!")
         End Sub
 
         Public Sub Brake()
-            _abs.OnBraking()
+            _abs?.OnBraking()
             Console.WriteLine("Braking!")
         End Sub
 #End Region
