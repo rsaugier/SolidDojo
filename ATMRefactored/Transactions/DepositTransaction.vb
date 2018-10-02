@@ -3,13 +3,13 @@
 Public Class DepositTransaction
     Implements ITransaction
 
-    Private ReadOnly _ui As IUserInterface
+    Private ReadOnly _ui As IDepositUserInterface
 
-    Public Sub New(ui As IUserInterface)
+    Public Sub New(ui As IDepositUserInterface)
         _ui = ui
     End Sub
 
     Public Sub Execute() Implements ITransaction.Execute
-        Throw New NotImplementedException()
+        _ui.RequestDepositAmount()
     End Sub
 End Class

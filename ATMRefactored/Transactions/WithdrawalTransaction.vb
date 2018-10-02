@@ -3,9 +3,9 @@
 Public Class WithdrawalTransaction
     Implements ITransaction
 
-    Private ReadOnly _ui As IUserInterface
+    Private ReadOnly _ui As IWithdrawalUserInterface
 
-    Public Sub New(ui As IUserInterface)
+    Public Sub New(ui As IWithdrawalUserInterface)
         _ui = ui
     End Sub
 

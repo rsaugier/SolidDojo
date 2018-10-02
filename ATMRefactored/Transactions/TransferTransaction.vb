@@ -3,9 +3,9 @@
 Public Class TransferTransaction
     Implements ITransaction
 
-    Private ReadOnly _ui As IUserInterface
+    Private ReadOnly _ui As ITransferUserInterface
 
-    Public Sub New(ui As IUserInterface)
+    Public Sub New(ui As ITransferUserInterface)
         _ui = ui
     End Sub
 

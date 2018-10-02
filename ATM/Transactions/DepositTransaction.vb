@@ -10,6 +10,6 @@ Public Class DepositTransaction
     End Sub
 
     Public Sub Execute() Implements ITransaction.Execute
-        Throw New NotImplementedException()
+        _ui.RequestDepositAmount()
     End Sub
 End Class
