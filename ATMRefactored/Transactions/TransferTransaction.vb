@@ -1,6 +1,4 @@
-﻿Imports ATM
-
-Public Class TransferTransaction
+﻿Public Class TransferTransaction
     Implements ITransaction
 
     Private ReadOnly _ui As ITransferUserInterface

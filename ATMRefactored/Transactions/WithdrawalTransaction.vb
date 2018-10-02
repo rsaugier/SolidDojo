@@ -1,6 +1,4 @@
-﻿Imports ATM
-
-Public Class WithdrawalTransaction
+﻿Public Class WithdrawalTransaction
     Implements ITransaction
 
     Private ReadOnly _ui As IWithdrawalUserInterface

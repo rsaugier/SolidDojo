@@ -1,6 +1,4 @@
-﻿Imports ATM
-
-Public Class DepositTransaction
+﻿Public Class DepositTransaction
     Implements ITransaction
 
     Private ReadOnly _ui As IDepositUserInterface

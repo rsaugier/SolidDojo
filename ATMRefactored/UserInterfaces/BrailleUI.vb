@@ -1,6 +1,4 @@
-﻿Imports ATM
-
-Public Class BrailleUI
+﻿Public Class BrailleUI
     Implements IUserInterface
 
     Public Sub InformInsufficientFunds() Implements IWithdrawalUserInterface.InformInsufficientFunds

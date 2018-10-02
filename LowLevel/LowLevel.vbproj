@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C1F4BDC-2E97-47E0-848C-903223BBED8B}</ProjectGuid>
+    <ProjectGuid>{C8112F0F-E052-4A29-BD9D-1925852DFEE2}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ATMRefactored</RootNamespace>
-    <AssemblyName>ATMRefactored</AssemblyName>
+    <RootNamespace>LowLevel</RootNamespace>
+    <AssemblyName>LowLevel</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -18,7 +18,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ATMRefactored.xml</DocumentationFile>
+    <DocumentationFile>LowLevel.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -27,7 +27,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ATMRefactored.xml</DocumentationFile>
+    <DocumentationFile>LowLevel.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -63,12 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ATM.vb" />
-    <Compile Include="IDepositUserInterface.vb" />
-    <Compile Include="ITransaction.vb" />
-    <Compile Include="ITransferUserInterface.vb" />
-    <Compile Include="IUserInterface.vb" />
-    <Compile Include="IWithdrawalUserInterface.vb" />
+    <Compile Include="LowLevelService.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -84,12 +79,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Transactions\DepositTransaction.vb" />
-    <Compile Include="Transactions\TransferTransaction.vb" />
-    <Compile Include="Transactions\WithdrawalTransaction.vb" />
-    <Compile Include="UserInterfaces\BrailleUI.vb" />
-    <Compile Include="UserInterfaces\ScreenUI.vb" />
-    <Compile Include="UserInterfaces\SpeechUI.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -109,6 +98,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.vbproj">
+      <Project>{7572a301-2978-41d3-9555-fd22cd3656fa}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

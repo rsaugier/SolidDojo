@@ -1,6 +1,4 @@
-﻿Imports ATM
-
-Public Class ScreenUI
+﻿Public Class ScreenUI
     Implements IUserInterface
 
     Public Sub InformInsufficientFunds() Implements IWithdrawalUserInterface.InformInsufficientFunds

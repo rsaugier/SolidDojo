@@ -1,6 +1,4 @@
-﻿Imports ATM
-
-Public Class SpeechUI
+﻿Public Class SpeechUI
     Implements IUserInterface
 
     Public Sub InformInsufficientFunds() Implements IWithdrawalUserInterface.InformInsufficientFunds
